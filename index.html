@@ -3,9 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style src="./styles.css"></style>
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./script.js" defer type="module"></script>
     <title>Windows XP</title>
   </head>
-  <body></body>
+  <body>
+    <div class="desktop">
+      <div class="desktop__taskbar">
+        <div class="desktop__taskbar--homebar">
+          <img
+            src="./media/xp_start_normal.png"
+            alt="start"
+            class="desktop__taskbar--icons"
+          />
+        </div>
+        <div class="desktop__taskbar--app"></div>
+        <div class="desktop__taskbar--widget">
+          <span class="date-time"></span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

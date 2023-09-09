@@ -1,1 +1,40 @@
+body {
+  background-image: url("./media/windows_xp_background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0px;
+}
 
+.desktop__taskbar {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(33, 97, 223);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.desktop__taskbar--homebar {
+  height: 40px;
+  width: 100px;
+  color: white;
+}
+.desktop__taskbar--widget {
+  height: 40px;
+  background-color: rgb(6, 157, 239);
+  width: 80px;
+  border-left: 2px, solid, black;
+}
+.desktop__taskbar--app {
+  height: 40px;
+  background-color: rgb(54, 129, 244);
+  width: 80px;
+}
+.desktop__taskbar--icons {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  background-color: black;
+}
