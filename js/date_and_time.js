@@ -1,6 +1,9 @@
-export const updateTime = () => {
-  const displayTime = document.querySelector(".date-time");
-  const time = new Date().getTime();
-  displayTime.textContent = time.substring(16, 21);
+export const getTime = () => {
+  const time = new Date().toLocaleTimeString("en-AU", {
+    timeZone: "Australia/Sydney",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+  return time;
 };
-setInterval(updateTime, 1000);

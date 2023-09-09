@@ -1,11 +1,35 @@
 body {
-  background-image: url("./media/windows_xp_background.jpeg");
+  background-image: url("./media/windows-xp-background.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   margin: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+.desktop__apps {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 70px;
+  padding: 20px;
+}
+.apps__title {
+  text-align: center;
+  font-size: 12px;
+  word-wrap: break-word;
+  width: 60px;
+}
+.apps__icon {
+  height: 32px;
+  width: 32px;
+  padding-top: 10px;
+  padding-left: 15px;
+}
 .desktop__taskbar {
   position: absolute;
   bottom: 0;
@@ -14,18 +38,25 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 1px 1px 5px 2px rgba(73, 145, 237, 255) inset;
 }
 .desktop__taskbar--homebar {
-  height: 40px;
-  width: 100px;
-  color: white;
+  width: 120px;
 }
 .desktop__taskbar--widget {
-  height: 40px;
   background-color: rgb(6, 157, 239);
-  width: 80px;
+  width: 100px;
   border-left: 2px, solid, black;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 2px rgba(43, 174, 240, 255) inset;
 }
+.time {
+  font-size: 12px;
+  justify-self: flex-start;
+}
+
 .desktop__taskbar--app {
   height: 40px;
   background-color: rgb(54, 129, 244);
