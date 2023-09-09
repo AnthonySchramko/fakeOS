@@ -9,24 +9,74 @@
   </head>
   <body>
     <div class="desktop">
-      <div class="desktop__apps">
-        <div class="apps">
-          <img src="./media/xp-recycle-bin.png" alt="" class="apps__icon" />
-          <div class="apps__title">Recycle Bin</div>
+      <div class="desktop__icons">
+        <div class="icons" id="icons__recycle-bin">
+          <img src="./media/xp-recycle-bin.png" alt="" class="icon" />
+          <div class="icons__title">Recycle Bin</div>
         </div>
-        <div class="apps">
-          <img src="./media/xp-notepad.png" alt="" class="apps__icon" />
-          <div class="apps__title">Notepad</div>
+        <div class="icons" id="icons__notepad">
+          <img src="./media/xp-notepad.png" alt="" class="icon" />
+          <div class="icons__title">Notepad</div>
         </div>
-        <div class="apps">
-          <img src="./media/xp-messenger.jpeg" alt="" class="apps__icon" />
-          <div class="apps__title">Windows Messenger</div>
+        <div class="icons" id="icons__messenger">
+          <img src="./media/xp-messenger.jpeg" alt="" class="icon" />
+          <div class="icons__title">Windows Messenger</div>
         </div>
-        <div class="apps">
-          <img src="./media/xp-folder-images.png" alt="" class="apps__icon" />
-          <div class="apps__title">My Pictures</div>
+        <div class="icons" id="icons__pictures">
+          <img src="./media/xp-folder-images.png" alt="" class="icon" />
+          <div class="icons__title">My Pictures</div>
         </div>
       </div>
+      <div class="desktop__apps">
+        <div class="app app--hidden" id="recycle-bin">
+          <div class="app__header">
+            <p class="app__header--text">Untitled - Notepad</p>
+            <img src="./media/minimise-icon.jpg" alt="" />
+            <img src="./media/maximize-icon.jpg" alt="" />
+            <img src="./media/exit-icon.jpg" alt="" />
+          </div>
+          <div class="app__settings"></div>
+          <div class="app__content"></div>
+        </div>
+      </div>
+      <div class="app app--shown" id="notepad">
+        <div class="app__header">
+          <div class="app__header--text">
+            <p><img src="./media/xp-notepad.png" alt="" />Untitled - Notepad</p>
+          </div>
+          <div class="app__header--icon">
+            <img src="./media/minimise-icon.jpg" alt="" />
+            <img src="./media/maximize-icon.jpg" alt="" />
+            <img src="./media/exit-icon.jpg" alt="" />
+          </div>
+        </div>
+        <div class="app__settings"></div>
+        <div class="app__content"></div>
+      </div>
+
+      <div class="app app--hidden" id="messenger">
+        <div class="app__header">
+          <p class="app__header--text">
+            <img src="./media/xp-notepad.png" alt="" />Untitled - Notepad
+          </p>
+          <img src="./media/minimise-icon.jpg" alt="" />
+          <img src="./media/maximize-icon.jpg" alt="" />
+          <img src="./media/exit-icon.jpg" alt="" />
+        </div>
+        <div class="app__settings"></div>
+        <div class="app__content"></div>
+      </div>
+      <div class="app app--hidden" id="pictures">
+        <div class="app__header">
+          <p>Untitled - Notepad</p>
+          <img src="./media/minimise-icon.jpg" alt="" />
+          <img src="./media/maximize-icon.jpg" alt="" />
+          <img src="./media/exit-icon.jpg" alt="" />
+        </div>
+        <div class="app__settings"></div>
+        <div class="app__content"></div>
+      </div>
+
       <div class="desktop__taskbar">
         <div class="desktop__taskbar--homebar">
           <img
