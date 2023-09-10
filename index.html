@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="./script.js" defer></script>
+    <script type="module" src="./js/script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Windows XP</title>
   </head>
@@ -30,51 +30,63 @@
       <div class="desktop__apps">
         <div class="app app--hidden" id="recycle-bin">
           <div class="app__header">
-            <p class="app__header--text">Untitled - Notepad</p>
-            <img src="./media/minimise-icon.jpg" alt="" />
-            <img src="./media/maximize-icon.jpg" alt="" />
-            <img src="./media/exit-icon.jpg" alt="" />
+            <div class="app__header--text">
+              <p>Recycle Bin</p>
+            </div>
+            <div class="app__header--icon">
+              <img src="./media/minimise-icon.jpg" alt="" />
+              <img src="./media/maximize-icon.jpg" alt="" />
+              <img src="./media/exit-icon.jpg" alt="" />
+            </div>
           </div>
           <div class="app__settings"></div>
           <div class="app__content"></div>
         </div>
-      </div>
-      <div class="app app--shown" id="notepad">
-        <div class="app__header">
-          <div class="app__header--text">
-            <p><img src="./media/xp-notepad.png" alt="" />Untitled - Notepad</p>
+        <div class="app app--hidden" id="notepad">
+          <div class="app__header">
+            <div class="app__header--text">
+              <p>
+                <img src="./media/xp-notepad.png" alt="" />Untitled - Notepad
+              </p>
+            </div>
+            <div class="app__header--icon">
+              <img src="./media/minimise-icon.jpg" alt="" />
+              <img src="./media/maximize-icon.jpg" alt="" />
+              <img src="./media/exit-icon.jpg" alt="" />
+            </div>
           </div>
-          <div class="app__header--icon">
-            <img src="./media/minimise-icon.jpg" alt="" />
-            <img src="./media/maximize-icon.jpg" alt="" />
-            <img src="./media/exit-icon.jpg" alt="" />
-          </div>
+          <div class="app__settings"></div>
+          <div class="app__content"></div>
         </div>
-        <div class="app__settings"></div>
-        <div class="app__content"></div>
-      </div>
 
-      <div class="app app--hidden" id="messenger">
-        <div class="app__header">
-          <p class="app__header--text">
-            <img src="./media/xp-notepad.png" alt="" />Untitled - Notepad
-          </p>
-          <img src="./media/minimise-icon.jpg" alt="" />
-          <img src="./media/maximize-icon.jpg" alt="" />
-          <img src="./media/exit-icon.jpg" alt="" />
+        <div class="app app--hidden" id="messenger">
+          <div class="app__header">
+            <div class="app__header--text">
+              <p><img src="./media/xp-notepad.png" alt="" />Messenger</p>
+            </div>
+            <div class="app__header--icon">
+              <img src="./media/minimise-icon.jpg" alt="" />
+              <img src="./media/maximize-icon.jpg" alt="" />
+              <img src="./media/exit-icon.jpg" alt="" />
+            </div>
+          </div>
+          <div class="app__settings"></div>
+          <div class="app__content"></div>
         </div>
-        <div class="app__settings"></div>
-        <div class="app__content"></div>
-      </div>
-      <div class="app app--hidden" id="pictures">
-        <div class="app__header">
-          <p>Untitled - Notepad</p>
-          <img src="./media/minimise-icon.jpg" alt="" />
-          <img src="./media/maximize-icon.jpg" alt="" />
-          <img src="./media/exit-icon.jpg" alt="" />
+        <div class="app app--hidden" id="pictures">
+          <div class="app__header">
+            <div class="app__header--text">
+              <p>C:\Pictures</p>
+            </div>
+            <div class="app__header--icon">
+              <img src="./media/minimise-icon.jpg" alt="" />
+              <img src="./media/maximize-icon.jpg" alt="" />
+              <img src="./media/exit-icon.jpg" alt="" />
+            </div>
+          </div>
+          <div class="app__settings"></div>
+          <div class="app__content"></div>
         </div>
-        <div class="app__settings"></div>
-        <div class="app__content"></div>
       </div>
 
       <div class="desktop__taskbar">

@@ -17,6 +17,7 @@ body {
   height: 100%;
   width: 70px;
   padding: 20px;
+  margin: 0px;
 }
 .icons__title {
   text-align: center;
@@ -69,12 +70,13 @@ body {
 footer {
   background-color: black;
 }
-.app--shown {
-  display: block;
-}
 .app--hidden {
   display: none;
 }
+.app--shown {
+  display: block;
+}
+
 .app__header {
   margin: 0;
   height: 30px;
@@ -86,6 +88,7 @@ footer {
   box-shadow: 1px 1px 5px 2px rgba(45, 145, 253, 255) inset;
 }
 .app__header--text {
+  height: 100%;
 }
 .app__header--icon {
   margin: 0;
