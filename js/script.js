@@ -1,10 +1,5 @@
 import { getTime } from "./apps/date_and_time.js";
-import {
-  domElements,
-  createElementWithText,
-  deleteElementContents,
-  hideApps,
-} from "./dom-utils.js";
+import { hideApps, hideApp, showApp } from "./dom-utils.js";
 
 const recycleBin = document.querySelector("#icons__recycle-bin");
 const notepad = document.querySelector("#icons__notepad");
@@ -27,25 +22,41 @@ updateTime();
 // });
 recycleBin.addEventListener("dblclick", (e) => {
   e.preventDefault();
-  console.log("recycleBin");
   hideApps();
-  recycleBinApp.classList.add("app--shown");
+  showApp(recycleBinApp);
+  const recycleBinExitIcon = document.querySelector("#recycleExit");
+  recycleBinExitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideApp(recycleBinApp);
+  });
 });
 notepad.addEventListener("dblclick", (e) => {
   e.preventDefault();
-  console.log("notepad");
   hideApps();
-  notepadApp.classList.add("app--shown");
+  showApp(notepadApp);
+  const notepadExitIcon = document.querySelector("#notepadExit");
+  notepadExitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideApp(notepadApp);
+  });
 });
 messenger.addEventListener("dblclick", (e) => {
   e.preventDefault();
-  console.log("messenger");
   hideApps();
   messengerApp.classList.add("app--shown");
+  const messengerExitIcon = document.querySelector("#messengerExit");
+  messengerExitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideApp(messengerApp);
+  });
 });
 pictures.addEventListener("dblclick", (e) => {
   e.preventDefault();
-  console.log("pictures");
   hideApps();
-  picturesApp.classList.add("app--shown");
+  showApp(picturesApp);
+  const picturesExitIcon = document.querySelector("#picturesExit");
+  picturesExitIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideApp(picturesApp);
+  });
 });

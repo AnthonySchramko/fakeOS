@@ -1,5 +1,5 @@
 const elementArr = [];
-export const domElements = (identifier) => {
+const domElements = (identifier) => {
   let element;
   if (identifier.id) {
     element = document.querySelector(`#${identifier.id}`);
@@ -10,19 +10,6 @@ export const domElements = (identifier) => {
   return element;
 };
 
-export const createElementWithText = (elementType, text, parentNode) => {
-  const node = document.createElement(elementType);
-  const returnText = document.createTextNode(text);
-  node.appendChild(returnText);
-  parentNode.appendChild(node);
-};
-export const deleteElementContents = (element) => {
-  let child = element.lastElementChild;
-  while (child) {
-    element.removeChild(child);
-    child = element.lastElementChild;
-  }
-};
 const apps = domElements({ classCSS: "app" });
 export const hideApps = () => {
   for (const element of apps) {
@@ -30,4 +17,12 @@ export const hideApps = () => {
       element.classList.remove("app--shown");
     }
   }
+};
+export const hideApp = (parent) => {
+  if (parent.classList.contains("app--shown")) {
+    parent.classList.remove("app--shown");
+  }
+};
+export const showApp = (parent) => {
+  parent.classList.add("app--shown");
 };
