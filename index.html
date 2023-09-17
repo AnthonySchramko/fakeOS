@@ -9,98 +9,177 @@
   </head>
   <body>
     <div class="desktop">
-      <div class="desktop__icons">
-        <div class="icons" id="icons__recycle-bin">
-          <img src="./media/xp-recycle-bin.png" alt="" class="icon" />
-          <div class="icons__title">Recycle Bin</div>
-        </div>
+      <div class="desktop__icon">
         <div class="icons" id="icons__notepad">
-          <img src="./media/xp-notepad.png" alt="" class="icon" />
+          <img src="./media/appIcons/xp-notepad.png" alt="" class="icon" />
           <div class="icons__title">Notepad</div>
-        </div>
-        <div class="icons" id="icons__messenger">
-          <img src="./media/xp-messenger.jpeg" alt="" class="icon" />
-          <div class="icons__title">Windows Messenger</div>
-        </div>
-        <div class="icons" id="icons__pictures">
-          <img src="./media/xp-folder-images.png" alt="" class="icon" />
-          <div class="icons__title">My Pictures</div>
         </div>
       </div>
       <div class="desktop__apps">
-        <div class="app app--hidden" id="recycle-bin">
-          <div class="app__header">
-            <div class="app__header--text">
-              <p>Recycle Bin</p>
-            </div>
-            <div class="app__header--icon">
-              <img src="./media/minimise-icon.jpg" alt="" />
-              <img src="./media/maximize-icon.jpg" alt="" />
-              <img src="./media/exit-icon.jpg" alt="" id="recycleExit" />
-            </div>
-          </div>
-          <div class="app__settings"></div>
-          <div class="app__content"></div>
-        </div>
         <div class="app app--hidden" id="notepad">
           <div class="app__header">
             <div class="app__header--text">
-              <p>
-                <img src="./media/xp-notepad.png" alt="" />Untitled - Notepad
-              </p>
+              <img src="./media/appIcons/xp-notepad.png" alt="notepad icon" />
+              <span>Untitled - Notepad</span>
             </div>
             <div class="app__header--icon">
-              <img src="./media/minimise-icon.jpg" alt="" />
-              <img src="./media/maximize-icon.jpg" alt="" />
-              <img src="./media/exit-icon.jpg" alt="" id="notepadExit" />
+              <img src="./media/appIcons/minimise-icon.jpg" alt="" />
+              <img src="./media/appIcons/maximize-icon.jpg" alt="" />
+              <img
+                src="./media/appIcons/exit-icon.jpg"
+                alt=""
+                id="notepadExit"
+              />
             </div>
           </div>
-          <div class="app__settings"></div>
-          <div class="app__content"></div>
+          <div class="app__settings">
+            <ul class="app__settings--background">
+              <li class="app__settings--icon">File</li>
+              <li class="app__settings--icon">Edit</li>
+              <li class="app__settings--icon">View</li>
+              <li class="app__settings--icon">Settings</li>
+              <li class="app__settings--icon">Help</li>
+            </ul>
+          </div>
+          <div class="app__content">
+            <textarea
+              name="notepadText"
+              id="notepadText"
+              class="app__content--notepad"
+            ></textarea>
+          </div>
         </div>
-
-        <div class="app app--hidden" id="messenger">
+        <div class="app app--hidden" id="computer">
           <div class="app__header">
             <div class="app__header--text">
-              <p><img src="./media/xp-notepad.png" alt="" />Messenger</p>
+              <img src="./media/startMenu/computer.png" alt="myComputer icon" />
+              <span>My Computer</span>
             </div>
             <div class="app__header--icon">
-              <img src="./media/minimise-icon.jpg" alt="" />
-              <img src="./media/maximize-icon.jpg" alt="" />
-              <img src="./media/exit-icon.jpg" alt="" id="messengerExit" />
+              <img src="./media/appIcons/minimise-icon.jpg" alt="" />
+              <img src="./media/appIcons/maximize-icon.jpg" alt="" />
+              <img
+                src="./media/appIcons/exit-icon.jpg"
+                alt=""
+                id="computerExit"
+              />
             </div>
           </div>
-          <div class="app__settings"></div>
-          <div class="app__content"></div>
-        </div>
-        <div class="app app--hidden" id="pictures">
-          <div class="app__header">
-            <div class="app__header--text">
-              <p>C:\Pictures</p>
-            </div>
-            <div class="app__header--icon">
-              <img src="./media/minimise-icon.jpg" alt="" />
-              <img src="./media/maximize-icon.jpg" alt="" />
-              <img src="./media/exit-icon.jpg" alt="" id="picturesExit" />
-            </div>
+          <div class="app__settings">
+            <ul class="app__settings--background">
+              <li class="app__settings--icon">File</li>
+              <li class="app__settings--icon">Edit</li>
+              <li class="app__settings--icon">View</li>
+              <li class="app__settings--icon">Settings</li>
+              <li class="app__settings--icon">Help</li>
+            </ul>
           </div>
-          <div class="app__settings"></div>
-          <div class="app__content"></div>
+          <div class="app__content">
+            <h2>FakeOS Project</h2>
+            <p>
+              Welcome to the fake Windows XP system on a web page. I hope you
+              have enjoyed a trip down memory lane.
+            </p>
+            <p>Made by Anthony Schramko.</p>
+          </div>
         </div>
-      </div>
+        <div class="desktop__startMenu app--hidden" id="startApp">
+          <div class="startMenu--header"><p>Unknown User</p></div>
 
-      <div class="desktop__taskbar">
-        <div class="desktop__taskbar--homebar">
-          <img
-            src="./media/xp_start_normal.png"
-            alt="start"
-            class="desktop__taskbar--icons"
-          />
+          <div class="startMenu">
+            <div class="startMenu--apps">
+              <div class="startMenu__notepad">
+                <img
+                  src="./media/appIcons/xp-notepad.png"
+                  alt=""
+                  class="icon"
+                />
+                <span> Notepad</span>
+              </div>
+              <div class="startMenu__Files">
+                <img
+                  src="./media/appIcons/fileExplorer.png"
+                  alt=""
+                  class="icon"
+                />
+                <span> File explorer</span>
+              </div>
+              <div class="startMenu__Messenger">
+                <img
+                  src="./media/appIcons/xp-messenger.jpeg"
+                  alt=""
+                  class="icon"
+                />
+                <span> MSN Messenger</span>
+              </div>
+              <div class="startMenu__programs">
+                <span class="startMenu--bold">
+                  All Programs
+                  <img
+                    src="./media/startMenu/allPrograms.png"
+                    alt=""
+                    class="startMenu--icon"
+                  />
+                </span>
+              </div>
+            </div>
+            <div class="startMenu--settings">
+              <div class="settings--bold">
+                <div class="startMenu__documents">
+                  <img
+                    src="./media/startMenu/documents.png"
+                    alt=""
+                    class="icon"
+                  />
+                  My Documents
+                </div>
+                <div class="startMenu__computer" id="computerStart">
+                  <img
+                    src="./media/startMenu/computer.png"
+                    alt=""
+                    class="icon"
+                  />
+                  My Computer
+                </div>
+              </div>
+              <div class="startMenu__control">
+                <img src="./media/startMenu/control.png" alt="" class="icon" />
+                Control Panel
+              </div>
+            </div>
+          </div>
+          <div class="startMenu--bar">
+            <div class="startMenu__logOff">
+              <span>
+                <img
+                  src="./media/startMenu/logOff.png"
+                  alt="log off button"
+                  class="startMenu--icon"
+                />Log Off</span
+              >
+            </div>
+            <div class="startMenu__shutDown">
+              <img
+                src="./media/startMenu/shutDown.png"
+                alt="shut down button"
+                class="startMenu--icon"
+              />Shut Down
+            </div>
+          </div>
         </div>
-        <div class="desktop__taskbar--app"></div>
-        <div class="desktop__taskbar--widget">
-          <img src="./media/xp-audio-icon.png" alt="audio" />
-          <span class="time"></span>
+        <div class="desktop__taskbar">
+          <div class="desktop__taskbar--homebar">
+            <img
+              src="./media/startMenu/xp_start_normal.png"
+              alt="start"
+              class="desktop__taskbar--icon"
+              id="startMenu"
+            />
+          </div>
+          <div class="desktop__taskbar--widget">
+            <img src="./media/xp-audio-icon.png" alt="audio" />
+            <span class="time"></span>
+          </div>
         </div>
       </div>
     </div>

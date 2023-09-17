@@ -19,30 +19,28 @@ body {
   padding: 20px;
   margin: 0px;
 }
+.icon {
+  height: 32px;
+  width: 32px;
+  padding-top: 20px;
+  padding-left: 15px;
+}
 .icons__title {
   text-align: center;
   font-size: 12px;
   word-wrap: break-word;
   width: 60px;
 }
-.icon {
-  height: 32px;
-  width: 32px;
-  padding-top: 10px;
-  padding-left: 15px;
-}
 .desktop__taskbar {
   position: absolute;
   bottom: 0;
   background-color: rgb(33, 97, 223);
   width: 100%;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   box-shadow: 1px 1px 5px 2px rgba(73, 145, 237, 255) inset;
-}
-.desktop__taskbar--homebar {
-  width: 120px;
 }
 .desktop__taskbar--widget {
   background-color: rgb(6, 157, 239);
@@ -57,18 +55,12 @@ body {
   font-size: 12px;
   justify-self: flex-start;
 }
-
-.desktop__taskbar--app {
-  height: 40px;
-  background-color: rgb(54, 129, 244);
-  width: 80px;
+.desktop__taskbar--homebar {
+  width: 150px;
 }
-.desktop__taskbar--icons {
+.desktop__taskbar--icon {
   width: 100%;
   height: 100%;
-}
-footer {
-  background-color: black;
 }
 .app--hidden {
   display: none;
@@ -76,32 +68,128 @@ footer {
 .app--shown {
   display: block;
 }
-
 .app__header {
-  margin: 0;
   height: 30px;
-  width: 100%;
   display: flex;
   align-items: center;
-  flex-flow: row nowrap;
+  justify-content: center;
   background-color: rgba(0, 84, 227, 255);
   box-shadow: 1px 1px 5px 2px rgba(45, 145, 253, 255) inset;
 }
 .app__header--text {
-  height: 100%;
+  width: 100%;
+  font-size: 12px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 .app__header--icon {
-  margin: 0;
-  padding-left: 84%;
+  display: flex;
+  justify-content: flex-end;
 }
 .app {
   border: 2px solid rgba(0, 84, 227, 255);
+  position: absolute;
+  width: 100%;
 }
-.app__settings {
-  background-color: rgba(236, 233, 216, 255);
-  height: 20px;
-}
+
 .app__content {
   background-color: white;
   height: 500px;
+  color: black;
+  text-shadow: none;
+  text-align: center;
+}
+.app__content--notepad {
+  height: 100%;
+  width: 100%;
+}
+.app__settings {
+  margin: 0;
+  list-style-type: none;
+  background-color: rgba(236, 233, 216, 255);
+  height: 100%;
+}
+.app__settings--background {
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-content: space-around;
+  list-style-type: none;
+  padding-left: 10px;
+}
+.app__settings--icon {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.desktop__startMenu {
+  width: 400px;
+  height: 40%;
+  position: absolute;
+  margin-top: 25%;
+  background-color: rgba(25, 106, 209, 255);
+  box-shadow: 1px 1px 5px 2px rgba(112, 169, 232, 255) inset;
+}
+.startMenu {
+  padding-top: 10px;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.startMenu--apps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  height: 90%;
+  width: 49%;
+  border-right: 2px solid rgba(175, 205, 242, 255);
+  color: rgba(105, 105, 106, 255);
+  text-shadow: none;
+}
+.startMenu--settings {
+  background-color: rgba(211, 229, 250, 255);
+  height: 90%;
+  width: 49%;
+  color: rgba(10, 36, 106, 255);
+  text-shadow: none;
+  font-weight: bold;
+}
+.startMenu--bar {
+  height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+.startMenu__programs {
+  font-weight: bold;
+  border-top: 1px rgba(222, 222, 214, 255) solid;
+  width: 80%;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+.startMenu__Messenger {
+  padding-bottom: 10px;
+}
+.startMenu--icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  border: 1px solid white;
+}
+.startMenu--header {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.startMenu__control {
+  margin-left: 10px;
+  width: 80%;
+  border-top: 1px rgba(153, 195, 254, 255) solid;
+  font-weight: normal;
 }

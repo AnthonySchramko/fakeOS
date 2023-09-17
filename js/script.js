@@ -1,62 +1,54 @@
-import { getTime } from "./apps/date_and_time.js";
+import { updateTime } from "./apps/date_and_time.js";
 import { hideApps, hideApp, showApp } from "./dom-utils.js";
 
-const recycleBin = document.querySelector("#icons__recycle-bin");
 const notepad = document.querySelector("#icons__notepad");
-const messenger = document.querySelector("#icons__messenger");
-const pictures = document.querySelector("#icons__pictures");
-const recycleBinApp = document.querySelector("#recycle-bin");
 const notepadApp = document.querySelector("#notepad");
-const messengerApp = document.querySelector("#messenger");
-const picturesApp = document.querySelector("#pictures");
-
+const startMenu = document.querySelector("#startMenu");
+const startMenuApp = document.querySelector("#startApp");
+const notepadStart = document.querySelector(".startMenu__notepad");
+const notepadExitIcon = document.querySelector("#notepadExit");
+const computerApp = document.querySelector("#computer");
+const computerStart = document.querySelector("#computerStart");
+const computerExit = document.querySelector("#computerExit");
+let startMenuClicked = false;
 //Time
-const updateTime = () => {
-  document.querySelector(".time").innerHTML = getTime();
-  setInterval(updateTime, 30000); //1000 = 1s, so 30000 = 0.5min. Calling this function every 0.5 min to update time and save memory
-};
 updateTime();
-
-// recycleBin.addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
-recycleBin.addEventListener("dblclick", (e) => {
-  e.preventDefault();
-  hideApps();
-  showApp(recycleBinApp);
-  const recycleBinExitIcon = document.querySelector("#recycleExit");
-  recycleBinExitIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideApp(recycleBinApp);
-  });
-});
+//Notepad app
 notepad.addEventListener("dblclick", (e) => {
   e.preventDefault();
   hideApps();
   showApp(notepadApp);
-  const notepadExitIcon = document.querySelector("#notepadExit");
-  notepadExitIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideApp(notepadApp);
-  });
 });
-messenger.addEventListener("dblclick", (e) => {
+notepadExitIcon.addEventListener("click", (e) => {
   e.preventDefault();
-  hideApps();
-  messengerApp.classList.add("app--shown");
-  const messengerExitIcon = document.querySelector("#messengerExit");
-  messengerExitIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideApp(messengerApp);
-  });
+  hideApp(notepadApp);
 });
-pictures.addEventListener("dblclick", (e) => {
+//My Computer app
+computerExit.addEventListener("click", (e) => {
   e.preventDefault();
-  hideApps();
-  showApp(picturesApp);
-  const picturesExitIcon = document.querySelector("#picturesExit");
-  picturesExitIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideApp(picturesApp);
-  });
+  hideApp(computerApp);
+});
+//Start menu
+startMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (startMenuClicked) {
+    hideApp(startMenuApp);
+    startMenu.src = "./media/startMenu/xp_start_normal.png";
+    startMenuClicked = false;
+  } else {
+    console.log("clicked");
+    startMenuClicked = true;
+    startMenu.src = "./media/startMenu/xp_start_clicked.png";
+    showApp(startMenuApp);
+  }
+});
+notepadStart.addEventListener("click", (e) => {
+  hideApp(startMenuApp);
+  startMenu.src = "./media/startMenu/xp_start_normal.png";
+  showApp(notepadApp);
+});
+computerStart.addEventListener("click", (e) => {
+  hideApp(startMenuApp);
+  startMenu.src = "./media/startMenu/xp_start_normal.png";
+  showApp(computerApp);
 });
